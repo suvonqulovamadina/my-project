@@ -1,0 +1,246 @@
+:root{
+    --primary-color: #322e41;
+    --text-color-dark:#ffffff;
+    --text-hover-color: #d47300;
+    --product-title-color: #2c2a2a;
+    --text-muted: #9b9b9b;
+    --link-hover-bg: #ffffff;
+    --main-bg :#F5F5F5;
+    --product-card-bg:#ffffff;
+    --product-image-border-color:#d47300;
+    --primary-btn-bg: #544294;
+    --primary-btn-color:#ffffff;
+    --icon-color: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins";
+    background-color: var(--main-bg);
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1110px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+#header {
+   background-color: var(--primary-color); 
+}
+
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+}
+.header-nav__items {
+    display: flex;
+}
+
+.header-nav__item {
+    padding: 22px 23px;
+    transition: 0.3s;
+}
+
+.header-nav__item:hover {
+    background-color: var(--link-hover-bg);
+    color: var(--text-hover-color);
+}
+
+.header-nav__link {
+    color: var(--text-color-dark);
+}
+
+.header-nav img {
+    z-index: 11;
+}
+
+.header-nav__item:hover .header-nav__link {
+    color: var(--text-hover-color);
+}
+
+.menu-icon {
+    color: var(--icon-color);
+    width: 3rem;
+    z-index: 11;
+    display: none;
+}
+
+.mobile-menu {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: var(--primary-color) ;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    transition: 0.5s;
+    transform: translateX(-100vw);
+}
+
+.mobile-menu.active {
+    transform: translateX(0);
+}
+
+.mobile-nav__items {
+    margin-top: 5rem;
+}
+
+/*banner*/
+#banner{
+    position: relative;
+}
+
+
+#banner {
+    background-image: url("/img/main-background.png");
+    height: 500px;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.banner-paragraph {
+    color: var(--text-color-dark);
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.banner-text {
+    color: var(--text-color-dark);
+    margin-top: 1rem;
+    font-size: 1.1rem;
+
+}
+
+/*product*/
+
+#products {
+    display: grid;
+    grid-template-areas: 
+    "a a b c"
+    "a a d e";
+    gap: 30px;
+    transform:translateY(-2rem) ;
+}
+
+.main-product {
+    max-width: 540px;
+    width: 100%;
+    background-color: var(--product-card-bg);
+    padding: 1rem;
+    border-radius: 6px;
+    grid-area: a;
+}
+
+.product-title {
+    margin-top: 1.3rem;
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: var(--product-title-color);
+}
+
+.product-text {
+    margin-top: 0.6rem;
+    color:var(--text-muted);
+}
+
+.product {
+    max-width: 255px;
+    width: 100%;
+    background-color: var(--product-card-bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 6px;
+}
+
+.product:nth-child(1){
+    grid-area: b;
+}
+
+.product:nth-child(2){
+    grid-area: c;
+}
+
+.product:nth-child(3){
+    grid-area: d;
+}
+
+.product:nth-child(4){
+    grid-area: e;
+}
+
+.product-image__wrapper{
+    width: 80px;
+    height: 80px;
+    border: 2px solid var(--product-image-border-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product .product-text {
+    text-align: center;
+}
+
+/*footer*/
+
+#footer{
+    background-color: var(--primary-color);
+    padding: 2.5rem 0;
+}
+
+#footer .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 350px;
+    width: 100%;
+    gap: 0.7rem;
+}
+
+.footer-form__input {
+    outline: none;
+    border: none;
+    padding: 0.6rem 0.7rem;
+    border-radius: 6px;
+}
+
+.footer-form__btn {
+    background-color: var(--primary-btn-bg);
+    color: var(--primary-btn-color);
+    border: none;
+    padding: 0.6rem;
+    border-radius: 6px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 2.5rem;
+}
